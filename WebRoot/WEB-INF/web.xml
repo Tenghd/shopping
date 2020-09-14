@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>shopping</display-name>
+  
+  <filter>
+  <filter-name>SafeFilter</filter-name>
+  <filter-class>com.baizhi.filter.SafeFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  <filter-name>SafeFilter</filter-name>
+  <url-pattern>/a/*</url-pattern>
+  </filter-mapping>
+  
+  <filter>
+  <filter-name>SafeFilterEncode</filter-name>
+  <filter-class>com.baizhi.filter.SafeFilterEncode</filter-class>
+  <init-param>
+  	<param-name>encode</param-name>
+  	<param-value>UTF-8</param-value>
+  	<!-- 给过滤器配置初始化参数 -->
+  </init-param>
+  </filter>
+  <filter-mapping>
+  <filter-name>SafeFilterEncode</filter-name>
+  <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  <servlet>
+  	<servlet-name>FindByPageAction</servlet-name>
+  	<servlet-class>com.baizhi.servlet.FindByPageAction</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>FindByPageAction</servlet-name>
+  	<url-pattern>/a/FindByPageAction</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>LoginAction</servlet-name>
+  	<servlet-class>com.baizhi.servlet.LoginAction</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>LoginAction</servlet-name>
+  	<url-pattern>/LoginAction</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>SafeOutAction</servlet-name>
+  	<servlet-class>com.baizhi.servlet.SafeOutAction</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>SafeOutAction</servlet-name>
+  	<url-pattern>/SafeOutAction</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  	<servlet-name>AddProductAction</servlet-name>
+  	<servlet-class>com.baizhi.servlet.AddProductAction</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>AddProductAction</servlet-name>
+  	<url-pattern>/AddProductAction</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>ChangePasswordAction</servlet-name>
+  	<servlet-class>com.baizhi.servlet.ChangePasswordAction</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ChangePasswordAction</servlet-name>
+  	<url-pattern>/a/ChangePasswordAction</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>ChangeUserMessageAction</servlet-name>
+  	<servlet-class>com.baizhi.servlet.ChangeUserMessageAction</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ChangeUserMessageAction</servlet-name>
+  	<url-pattern>/a/ChangeUserMessageAction</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>QueryByNameAndPriceAction</servlet-name>
+  	<servlet-class>com.baizhi.servlet.QueryByNameAndPriceAction</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>QueryByNameAndPriceAction</servlet-name>
+  	<url-pattern>/a/QueryByNameAndPriceAction</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>AddCartAction</servlet-name>
+  	<servlet-class>com.baizhi.servlet.AddCartAction</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>AddCartAction</servlet-name>
+  	<url-pattern>/a/AddCartAction</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>deleteCartAction</servlet-name>
+  	<servlet-class>com.baizhi.servlet.deleteCartAction</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>deleteCartAction</servlet-name>
+  	<url-pattern>/a/deleteCartAction</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  	<servlet-name>deleteAllCartAction</servlet-name>
+  	<servlet-class>com.baizhi.servlet.deleteAllCartAction</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>deleteAllCartAction</servlet-name>
+  	<url-pattern>/a/deleteAllCartAction</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
